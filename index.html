@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevil Maru - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --black: #121212;
+            --beige: #F5F1E8;
+            --accent: #C4A76D;
+            --white: #FFFFFF;
+            --text: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--beige);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: var(--black);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--accent);
+            padding: 1rem 0;
+        }
+        
+        nav a {
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--black);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+        
+        .about-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .project-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .project-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tech {
+            background-color: var(--accent);
+            color: var(--black);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--black);
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        .cv-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            width: 100%;
+            text-align: center;
+        }
+        
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--black);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+        
+        footer {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+            }
+            
+            nav a {
+                padding: 0.6rem;
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Nevil Maru</h1>
+            <p>Computer Science Student</p>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            
+            <div class="about-content">
+                <p>Diligent Student of Computer Science at Gisma University with a strong foundational base in programming, data structures and Web development. Enthusiastic about solving real-world problems with technology and having practical experience in Python, Java, and web development.</p>
+                
+                <p>Skilled in working both alone and in a team in fast-changing environments. Keen to utilize my academic knowledge in practical projects and keep developing technical skills in areas like Machine learning, Cybersecurity, and Cloud computing.</p>
+            </div>
+        </section>
+        
+        <!-- Project Section -->
+        <section id="project">
+            <div class="section-title">
+                <h2>Project</h2>
+            </div>
+            
+            <div class="project-card">
+                <h3>Professional Portfolio Website</h3>
+                <p>A responsive portfolio website built with HTML, CSS, and JavaScript to showcase technical skills and projects. Features a clean, professional design with a black and beige color scheme.</p>
+                
+                <p>This project demonstrates proficiency in front-end web development and responsive design principles. The website is optimized for all devices and showcases a professional aesthetic.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech">HTML5</span>
+                    <span class="tech">CSS3</span>
+                    <span class="tech">JavaScript</span>
+                    <span class="tech">Responsive Design</span>
+                    <span class="tech">GitHub Pages</span>
+                </div>
+                
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </section>
+        
+        <!-- CV Section -->
+        <section id="cv">
+            <div class="section-title">
+                <h2>Curriculum Vitae</h2>
+            </div>
+            
+            <div class="cv-section">
+                <p>Download my comprehensive CV detailing my education, technical skills, and professional experience.</p>
+                <a href="https://github.com/nvrmr098/Computer_Science_Labs/blob/main/cv/CV%20(4).pdf" class="btn" target="_blank">
+                    <i class="fas fa-download"></i> Download CV (PDF)
+                </a>
+                <p style="margin-top: 1rem; font-style: italic;">Created with LaTeX for professional typesetting</p>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="section-title">
+                <h2>Contact</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>nevilmaru03@gmail.com</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Berlin, Germany</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/nevil-maru-289b89262" class="social-icon" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/nvrmr098" class="social-icon" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:nevilmaru03@gmail.com" class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Nevil Maru | Computer Science Portfolio</p>
+        <p>Created for B201 Assessment | GISMA University of Applied Sciences</p>
+    </footer>
+</body>
+</html>
